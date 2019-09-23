@@ -1,0 +1,20 @@
+dist: xenial
+language: python
+virtualenv:
+  system_site_packages: true
+env:
+  - KERAS_BACKEND=tensorflow TENSORFLOW_V=1.8.0
+python:
+  - "3.5"
+matrix:
+  include:
+    - python: 3.5
+      env: KERAS_BACKEND=tensorflow TENSORFLOW_V=1.8.0
+
+install:
+  - pip install -r requirements.txt
+  - pip install pylint pycodestyle
+  - export PYTHONPATH=".":$PYTHONPATH
+
+script:
+  - ./run_tests.sh
