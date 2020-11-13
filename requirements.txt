@@ -1,7 +1,7 @@
 sklearn
 numpy==1.16.2
 keras==2.2.4
-tensorflow==1.8.0
+tensorflow==2.3.1
 torch==0.4.0
 adversarial-robustness-toolbox==0.9.0
 tqdm==4.32.2
